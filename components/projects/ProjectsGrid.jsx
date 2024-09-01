@@ -9,25 +9,8 @@ function ProjectsGrid() {
 	const [selectProject, setSelectProject] = useState('');
 
 	const filteredProjects = projectsData.filter((item) => {
-		// Check if the project's title matches the search input (case-insensitive)
-		// If there's no search input, consider it a match (i.e., return true)
-		const matchesSearch = searchProject
-			? item.title.toLowerCase().includes(searchProject.toLowerCase())
-			: true;
-
-		// Capitalize the first letter of the project's category
-		const category = item.category.charAt(0).toUpperCase() + item.category.slice(1);
-
-		// Check if the project's category matches the selected category
-		// If 'All Projects' is selected, consider it a match
-		// If no category is selected, consider it a match (i.e., return true)
-		const matchesCategory = selectProject
-			? category.includes(selectProject) || selectProject === 'All Projects'
-			: true;
-
-		// Return true if both the title matches the search input and
-		// the category matches the selected category (or 'All Projects' is selected)
-		return matchesSearch && matchesCategory;
+		
+		return true
 	});
 
 	return (
@@ -109,11 +92,7 @@ function ProjectsGrid() {
 				</div>
 			</div>
 
-			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-5">
-				{filteredProjects.map((project, index) => (
-					<ProjectSingle key={index} {...project} />
-				))}
-			</div>
+							
 		</section>
 	);
 }
