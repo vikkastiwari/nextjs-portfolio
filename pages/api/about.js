@@ -2,7 +2,7 @@ import dbConnect from "@/lib/dbConnect";
 import { About } from '@/model/about';
 
 export default async function handler(req, res) {
-	await dbConnect();
+	// await dbConnect();
 
 	try {
 		const data = await About.find();

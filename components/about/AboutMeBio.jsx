@@ -3,18 +3,7 @@ import { useEffect, useState } from 'react';
 import { aboutMeData } from '../../data/aboutMeData';
 
 function AboutMeBio() {
-	const [aboutMe, setAboutMe] = useState({});
-
-	useEffect(() => {
-		const fetchData = async () => {
-		    const response = await fetch('/api/about');
-		    const result = await response.json();
-		    console.log(result,"result")
-		    setAboutMe(result);
-		};
-  
-		fetchData();
-	 }, []);
+	const [aboutMe, setAboutMe] = useState(aboutMeData);
 
 	return (
 		<div className="block sm:flex sm:gap-10 mt-10 sm:mt-20">
