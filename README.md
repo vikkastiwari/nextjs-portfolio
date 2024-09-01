@@ -25,8 +25,6 @@ A simple portfolio starter theme built with Next.js, React and Tailwind CSS. Thi
 -   Download file button
 -   Simple and responsive design
 
-### To Contribute to this project, read the [Contribution Guidlines](https://github.com/realstoman/nextjs-tailwindcss-portfolio/blob/main/CONTRIBUTING.md)
-
 ## Setup
 
 1. Make sure you have Node JS installed. If you don't have it:
